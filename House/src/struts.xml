@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="house" extends="json-default" namespace="/">
+	
+	<!-- 查找房屋信息列表 -->
+	<action name="listHouse" class="com.action.HouseAction" method="listHouse">
+		<result name="success" type="json">
+		<param name="root">result</param>
+		<param name="excludeProperties">
+		rows\[\d+\]\.types,rows\[\d+\]\.users,rows\[\d+\]\.street,rows\[\d+\]\.district
+		</param>
+		</result>
+		<result name="input">error.jsp</result>
+	</action>
+	
+	<action name="deleteHouse" class="com.action.HouseAction" method="deleteHouse">
+		<result name="success" type="json">
+		</result>
+		<result name="input">error.jsp</result>
+	</action>
+	
+	
+	
+	
+</package>
+</struts>    
