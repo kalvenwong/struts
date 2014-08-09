@@ -13,7 +13,7 @@ public class HouseAction extends ActionSupport {
 	    private Map<String, Object> result = new HashMap<String, Object>();
 	    private String title;//Ä£ºý²éÑ¯¿ò
 	    private int id;//·¿ÎÝid
-	    
+	    //8.10 add
 	    HouseBiz hb= new HouseBizImpl();
 
 	    /**
